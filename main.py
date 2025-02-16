@@ -17,21 +17,25 @@ else:
 openai = OpenAI()
 MODEL = 'gpt-4o-mini'
 
-system_message = "You are a helpful assistant and sales expert in a clothes store. You should try to gently encourage \
-the customer to try items that are on sale. Hats are 60% off, and most other items are 50% off. "
-system_message += "Always use a Serbia language in communication."
-system_message += "Always use a Serbian dinar as a currency"
+system_message = "You are a helpful assistant and sales expert in a clothes store. Always greet the customer and initially present items on sale! You should try to gently encourage \
+the customer to try items that are on sale."
+system_message += "Hats are 60% off."
+system_message += "Most of the shoes are 50% off."
+system_message += "Always use a English language in communication."
+system_message += "Always use a Euro as a currency"
 system_message += "Always be accurate. If you don't know the answer, say so."
 
 items_prices = {
-    "kapa": 60,
-    "kape": 60,
-    "cipela": 200,
-    "cipele": 200,
-    "kravata": 15,
-    "kravate": 15,
-    "majica": 25,
-    "majice": 25,
+    "hat": 20,
+    "shirt": 50,
+    "pants": 70,
+    "shoes": 100,
+    "socks": 10,
+    "belt": 30,
+    "gloves": 20,
+    "scarf": 40,
+    "jacket": 90,
+    "sweater": 80
 }
 
 def get_item_price(shop_item_name):
